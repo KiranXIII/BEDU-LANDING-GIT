@@ -1,6 +1,6 @@
 body {
   width: 1024px;
-  magin: 0px;
+  margin: 0px;
 }
 
 footer {
@@ -8,22 +8,12 @@ footer {
 	background-size: cover;
 	height: 300px;
 	color: white;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 }
 
-footer div {
-	width: 400px;
-	height: inherit;
-	margin-left: 150px;
-}
-
-footer div p {
-	position: absolute;
-	bottom: 100px;
-	width: inherit;
-}
-
-footer div h2 {
-	position: absolute;
-	bottom: 186px;
-	width: inherit;
+#footer_text_container {
+	grid-column:2/4;
+	grid-row:2/3;
 }
