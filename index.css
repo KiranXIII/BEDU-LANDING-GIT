@@ -1,19 +1,99 @@
+html{
+  display: flex;
+  justify-content: center;
+}
+
 body {
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   margin: 0px;
+  position: relative;
 }
 
-footer {
-	background-image: url(blackops_ft.jpeg);
-	background-size: cover;
-	height: 300px;
-	color: white;
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+/* Header */
+header{
+  max-width: inherit;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  padding: .5rem;
+  color: white;
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
 }
 
-#footer_text_container {
-	grid-column:2/4;
-	grid-row:2/3;
+.header__container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header__img{
+  /* flex-grow: 0; */
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header__text{
+  margin: 0 .5rem;
+}
+
+nav{
+  margin-left: 1.5rem;
+  flex-grow: 1;
+  box-sizing: border-box;
+  /* width: 80%; */
+  /* background: yellow; */
+}
+
+nav ul{
+  display:flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item{
+  display: block;
+  text-decoration: none;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.nav__item:hover{
+  opacity: 0.6;
+}
+
+.nav__item h1{
+  font-size: 1rem;
+  margin: 0;
+  height: 1rem;
+}
+
+.nav__item h2{
+  font-size: .5rem;
+  margin: 0;
+  height: 1rem;
+  color: gray;
+}
+
+.header__menu{
+  display: block;
+  font-size: 1rem;
+  width: 1.5rem;
+  margin: 0;
+  cursor: pointer;
+  /* height: 100%; */
+}
+
+.header__menu:hover{
+  transform: translateY(.1rem);
+  transition-duration: 0.1s;
+}
+
+@media (max-width: 600px){
+  html{
+    font-size: 12px;
+  }
 }
